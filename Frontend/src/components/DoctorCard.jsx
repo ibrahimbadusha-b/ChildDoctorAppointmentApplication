@@ -19,14 +19,14 @@ export default function DoctorCard({ doctor, onBook }) {
       },
       "Dr. Rajesh Kumar": {
         qualification: "MBBS, MD Pediatrics, DM Neonatology",
-        experience: "15+ years",
+        experience: "5+ years",
         consultationFee: "₹1200",
         specialties: ["Newborn Care", "NICU Management", "Premature Babies"],
         timing: "9:00 AM - 6:00 PM"
       },
       "Dr. Kavitha Menon": {
         qualification: "MBBS, MS Surgery, MCh Pediatric Surgery",
-        experience: "18+ years",
+        experience: "8+ years",
         consultationFee: "₹1500",
         specialties: ["Pediatric Surgery", "Hernia Repair", "Congenital Defects"],
         timing: "7:30 AM - 4:00 PM"
