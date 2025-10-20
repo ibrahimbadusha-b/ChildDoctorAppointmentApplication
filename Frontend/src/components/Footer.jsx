@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="main-footer">
-      <div className="container">
+      <div className="container-fluid">
         {/* Main Footer Content */}
         <div className="footer-main">
           <div className="row">
@@ -80,7 +80,7 @@ const Footer = () => {
                     </div>
                     <div className="contact-details">
                       <span className="contact-label">Address:</span>
-                      <span className="contact-value">123 Healthcare Avenue<br />Medical District, City 12345</span>
+                      <span className="contact-value">Children's Hospital,<br />chennai</span>
                     </div>
                   </div>
 
@@ -90,7 +90,7 @@ const Footer = () => {
                     </div>
                     <div className="contact-details">
                       <span className="contact-label">Phone:</span>
-                      <span className="contact-value"><a href="tel:+919000501089" style={{ textDecoration: "none", color: "white" }}>+91 9000501089</a></span>
+                      <span className="contact-value"><a href="tel:+91 9000501089" style={{ textDecoration: "none", color: "white" }}>+91 9000501089</a></span>
                     </div>
                   </div>
 
