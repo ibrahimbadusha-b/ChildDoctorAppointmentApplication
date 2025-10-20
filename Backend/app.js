@@ -13,7 +13,7 @@ databaseConnection();
  app.use(express.json())
  app.use(cors())
 app.use('/api/users',User);
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT ||2000,()=>{
 console.log(`Server Created SuceessFully ${process.env.PORT}`);
 
 })
