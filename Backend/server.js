@@ -26,7 +26,7 @@ app.get("/realnews",(res,res,next)=>{
       res.send("Tommarrow had a huge rain alert for chennai")
 })
 app.use('/api/users', User);
-app.listen(PORT || 2000, () => {
-      console.log(`Server Created SuceessFully ${process.env.PORT}`);
+// app.listen(PORT || 2000, () => {
+//       console.log(`Server Created SuceessFully ${process.env.PORT}`);
 
-})
+// })
