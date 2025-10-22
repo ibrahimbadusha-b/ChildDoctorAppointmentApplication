@@ -83,7 +83,7 @@ export default function DoctorCard({ doctor, onBook }) {
           <div className="doctor-credentials">
             <div className="credential-item">
               <i className="fas fa-user-md credential-icon"></i>
-              <span className="credential-text">{doctorDetails.experience} Experience</span>
+              <span className="credential-text text-dark">{doctorDetails.experience} Experience</span>
             </div>
            
           </div>

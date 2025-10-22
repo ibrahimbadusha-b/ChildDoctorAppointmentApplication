@@ -108,10 +108,10 @@ const HealthBenefitsSection = () => {
                         <i className={`benefit-icon ${benefit.icon}`}></i>
                       </div>
                       <h3 className="benefit-title">{benefit.title}</h3>
-                      <div className="hover-indicator">
+                    {/*   <div className="hover-indicator">
                         <i className="fas fa-mouse-pointer me-2"></i>
                         <span>Hover for details</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 

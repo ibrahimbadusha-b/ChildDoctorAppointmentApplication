@@ -528,3 +528,9 @@
     transform: none;
   }
 }
+
+@media(max-width:320px){
+  .specialties-title{
+    color: white;
+  }
+}
