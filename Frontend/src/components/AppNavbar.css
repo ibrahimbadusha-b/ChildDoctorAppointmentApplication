@@ -42,7 +42,7 @@
 
 .logo-wrapper {
   position: relative;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .brand-logo {
@@ -61,10 +61,13 @@
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
-  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+/*   background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+ */ 
+ background-color: rgba(255, 255, 255, 0.9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-top: 5px;
 }
 
 .scrolled .brand-title {
@@ -925,14 +928,12 @@
   }
 }
 
-/* Mobile Devices (768px and below) */
 @media (max-width: 600px) {
   .navbar-container {
     padding: 0.875rem 1rem;
     gap: 0.75rem;
   }
   
-  /* Enhanced Mobile Login Button */
   .cta-button {
     padding: 0.6rem 1.2rem;
     font-size: 0.85rem;
@@ -1067,48 +1068,112 @@
   }
 }
 
-/* Small Mobile (600px and below) */
-
-
-/* Ultra Small Screens (360px and below) */
 @media (max-width: 360px) {
-  .navbar-container {
-    padding: 0.6rem;
-  }
-  
-  .cta-button {
-    width: 40px;
-    height: 40px;
-    padding: 0.4rem;
-  }
-  
-  .user-profile-btn {
-    min-width: 40px;
-    padding: 0.35rem;
-  }
-  
-  .profile-icon {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .brand-logo {
-    height: 35px;
-  }
-  
-  .user-dropdown-menu {
-    min-width: 180px;
-    right: -20px;
-  }
-  
-  .mobile-menu-content {
-    padding: 1.5rem;
-  }
-  
-  .mobile-nav-link {
-    padding: 0.875rem;
-    font-size: 0.95rem;
-  }
+.navbar-container {
+padding: 0.6rem;
+}
+
+.cta-button {
+width: auto; 
+height: 40px;
+padding: 0.4rem 0.8rem; 
+min-width: 80px; 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+}
+
+.button-content {
+display: flex;
+align-items: center;
+justify-content: center; 
+gap: 0.3rem; 
+}
+
+.button-text {
+display: inline;
+font-size: 0.75rem; 
+margin-left: 0; 
+}
+
+.button-icon {
+margin-right: 0; 
+font-size: 0.9rem; 
+}
+
+.user-profile-btn {
+min-width: 40px;
+padding: 0.35rem 0.6rem; 
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.profile-icon {
+width: 28px;
+height: 28px;
+}
+
+.user-display-name {
+font-size: 0.7rem; 
+max-width: 60px; 
+}
+
+.brand-logo {
+height: 35px;
+}
+
+.brand-title {
+font-size: 1.2rem; 
+}
+
+.user-dropdown-menu {
+min-width: 180px;
+right: -20px;
+}
+
+.mobile-menu-content {
+padding: 1.5rem;
+}
+
+.mobile-nav-link {
+padding: 0.875rem;
+font-size: 0.95rem;
+}
+}
+
+@media (max-width: 320px) {
+.cta-button {
+padding: 0.3rem 0.6rem;
+min-width: 70px;
+font-size: 0.7rem;
+}
+
+.button-text {
+font-size: 0.7rem;
+}
+
+.button-icon {
+font-size: 0.8rem;
+}
+
+.user-profile-btn {
+padding: 0.3rem 0.5rem;
+}
+
+.user-display-name {
+font-size: 0.65rem;
+max-width: 50px;
+}
+
+.brand-title {
+font-size: 1.1rem;
+}
+
+.navbar-container {
+padding: 0.5rem;
+gap: 0.5rem;
+}
 }
 
 /* Enhanced Focus States */
