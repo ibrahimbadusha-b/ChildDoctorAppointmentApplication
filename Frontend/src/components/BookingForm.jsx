@@ -51,7 +51,7 @@ export default function BookingForm({ preselectedDoctorId }) {
 
     setIsSubmitting(true);
 
-    fetch("child-doctor-appointment-application.vercel.app/api/users/storeUserData", {
+    fetch("https://child-doctor-appointment-application.vercel.app/api/users/storeUserData", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)

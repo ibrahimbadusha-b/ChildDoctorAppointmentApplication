@@ -13,9 +13,9 @@ export default function ParentDashboard() {
         let url="";
         
         if (user.email === "admin@gmail.com") {
-           url = "child-doctor-appointment-application.vercel.app/api/users/getUsersData";
+           url = "https://child-doctor-appointment-application.vercel.app/api/users/getUsersData";
         } else {          
-           url = `child-doctor-appointment-application.vercel.app/api/users/singleUserData/${user.email}`
+           url = `https://child-doctor-appointment-application.vercel.app/api/users/singleUserData/${user.email}`
         }
         const res=await fetch(url)
         const data = await res.json();
@@ -31,7 +31,7 @@ export default function ParentDashboard() {
   }, [])
 
   const deleteHandler=async (id)=>{
-   await fetch(`child-doctor-appointment-application.vercel.app/api/users/cancelAppointment/${id}`,{
+   await fetch(`https://child-doctor-appointment-application.vercel.app/api/users/cancelAppointment/${id}`,{
     headers:{"Content-Type":"application/json"},
     method:"DELETE"
    })
