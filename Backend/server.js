@@ -17,12 +17,12 @@ app.get('/', (req, res, next) => {
       res.send("<h1>Hello Mapla</h1>")
 }
 )
-app.get('/date', (res, res, next) => {
-      const date = new Date.now();
+app.get('/date', (req, res, next) => {
+const date = Date.now();
       res.send(date)
 })
 
-app.get("/realnews",(res,res,next)=>{
+app.get("/realnews",(req,res,next)=>{
       res.send("Tommarrow had a huge rain alert for chennai")
 })
 app.use('/api/users', User);
