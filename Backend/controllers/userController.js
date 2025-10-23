@@ -44,3 +44,7 @@ exports.cancelAppointment = async (req, res) => {
     res.status(500).json({ success: false, message: err.message });
   }
 };
+
+exports.demo=(req,res,next)=>{
+  res.send("<h1>Demo World</h1>")
+}
