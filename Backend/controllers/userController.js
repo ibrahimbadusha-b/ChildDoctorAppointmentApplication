@@ -1,10 +1,9 @@
 const userModel = require('../models/userModel');
 
-exports.storeUser = async (req, res) => {
-  const data = req.body;
-  console.log('Current_Data:', data);
+exports.storeUser = async (req, res,next) => {
+  const datas = req.body;
   try {
-    const userData = await userModel.create(data);
+    const userData = await userModel.create(datas);
     res.status(201).json({ success: true, userData });
   } catch (err) {
     console.error(err);
@@ -12,7 +11,7 @@ exports.storeUser = async (req, res) => {
   }
 };
 
-exports.getusers = async (req, res) => {
+exports.getusers = async (req, res,next) => {
   try {
     const userDatas = await userModel.find();
     res.status(200).json({ success: true, userDatas });
@@ -22,7 +21,7 @@ exports.getusers = async (req, res) => {
   }
 };
 
-exports.singleUser = async (req, res) => {
+exports.singleUser = async (req, res,next) => {
   const { email } = req.params;
   try {
     const userDatas = await userModel.find({ authEmail: email });
@@ -33,7 +32,7 @@ exports.singleUser = async (req, res) => {
   }
 };
 
-exports.cancelAppointment = async (req, res) => {
+exports.cancelAppointment = async (req, res,next) => {
   const { id } = req.params;
   try {
     const cancel = await userModel.findByIdAndDelete(id);
@@ -45,6 +44,3 @@ exports.cancelAppointment = async (req, res) => {
   }
 };
 
-exports.demo=(req,res,next)=>{
-  res.send("<h1>Demo World</h1>")
-}

@@ -7,6 +7,5 @@ router.route('/storeUserData').post(storeUser);
 router.route('/getUsersData').get(getusers);
 router.route('/singleUserData/:email').get(singleUser);
 router.route('/cancelAppointment/:id').delete(cancelAppointment);
-router.route('/demo').get(demo);
 
 module.exports = router;
