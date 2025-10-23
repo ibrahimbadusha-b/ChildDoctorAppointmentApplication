@@ -42,13 +42,12 @@ const AUTH_NAV_ITEMS = [
 ];
 
 export default function AppNavbar() {
-  // State management
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   
-  // Auth context and navigation
   const { 
     isAuthenticated, 
     logout, 
@@ -61,7 +60,6 @@ export default function AppNavbar() {
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     
@@ -69,7 +67,6 @@ export default function AppNavbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -81,7 +78,6 @@ export default function AppNavbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Close menus on route change
   useEffect(() => {
     const handleRouteChange = () => {
       setIsMobileMenuOpen(false);
@@ -92,7 +88,6 @@ export default function AppNavbar() {
     return () => window.removeEventListener('popstate', handleRouteChange);
   }, []);
 
-  // Toggle functions
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(prev => !prev);
     setIsUserDropdownOpen(false);
@@ -107,7 +102,6 @@ export default function AppNavbar() {
     setIsMobileMenuOpen(false);
   };
 
-  // Dynamic navigation items based on authentication
   const getNavigationItems = () => {
     const hasToken = localStorage.getItem('idToken');
     

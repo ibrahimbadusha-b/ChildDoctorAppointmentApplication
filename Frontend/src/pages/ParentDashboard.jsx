@@ -13,9 +13,9 @@ export default function ParentDashboard() {
         let url="";
         
         if (user.email === "admin@gmail.com") {
-           url = "http://localhost:2000/api/users/getUsersData";
+           url = "child-doctor-appointment-application.vercel.app/api/users/getUsersData";
         } else {          
-           url = `http://localhost:2000/api/users/singleUserData/${user.email}`
+           url = `child-doctor-appointment-application.vercel.app/api/users/singleUserData/${user.email}`
         }
         const res=await fetch(url)
         const data = await res.json();
@@ -31,7 +31,7 @@ export default function ParentDashboard() {
   }, [])
 
   const deleteHandler=async (id)=>{
-   await fetch(`http://localhost:2000/api/users/cancelAppointment/${id}`,{
+   await fetch(`child-doctor-appointment-application.vercel.app/api/users/cancelAppointment/${id}`,{
     headers:{"Content-Type":"application/json"},
     method:"DELETE"
    })
@@ -49,7 +49,6 @@ export default function ParentDashboard() {
         appointments.map((user) => (
           <div className="card mb-4 shadow-sm w-100v rounded" key={user._id}>
             <div className="card-body">
-              {/* Email */}
               <div className="mb-3">
                 <span className="fw-semibold">Email: </span>
                 <span>{user.authEmail}</span>
@@ -77,13 +76,11 @@ export default function ParentDashboard() {
 
               </div>
 
-              {/* Issue field */}
               <div className="mb-3">
                 <span className="fw-semibold">Issue: </span> {user.issue}
                 <span></span>
               </div>
 
-              {/* Cancel button */}
               <div className="text-end">
                 <button className="btn btn-outline-danger btn-sm" onClick={()=>deleteHandler(user._id)}> 
                   Cancel Appointment
