@@ -788,7 +788,6 @@
   transform: none;
 }
 
-/* Large Screens (1200px and below) */
 @media (max-width: 1200px) {
   .navbar-container {
     padding: 1rem 1.5rem;
@@ -808,7 +807,6 @@
   }
 }
 
-/* Tablets (992px and below) */
 @media (max-width: 992px) {
   .desktop-menu {
     display: none;
@@ -860,7 +858,6 @@
   }
 }
 
-/* Mobile Devices (768px and below) */
 @media (max-width: 768px) {
   .navbar-container {
     padding: 1rem 1.5rem;
@@ -931,7 +928,6 @@
   }
 }
 
-/* Mobile Devices (768px and below) */
 @media (max-width: 600px) {
    .navbar-container {
     padding: 1rem 1.5rem;
@@ -1002,7 +998,6 @@
   }
 }
 
-/* Mobile Devices (768px and below) */
 @media (max-width: 480px) {
   .navbar-container {
     padding: 0.875rem 1rem;
@@ -1079,7 +1074,7 @@
 /* Ultra Small Screens (360px and below) */
 @media (max-width: 360px) {
  .navbar-container {
-    padding: 1rem 1rem;
+    padding: 1.1rem 1rem;
     gap: 0.75rem;
   }
   
