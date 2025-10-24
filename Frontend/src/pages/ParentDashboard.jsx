@@ -69,11 +69,11 @@ export default function ParentDashboard() {
                   <span className="fw-semibold text-secondary">Child:</span>{" "}
                   <span className="text-dark fw-semibold">{user.childName}</span>
                 </div>
-                <div className="col-md-1 col-6 mb-2">
+                <div className="col-md-1 col-3 mb-2">
                   <span className="fw-semibold text-secondary">Age:</span>{" "}
                   <span className="fw-semibold text-dark">{user.childAge}</span>
                 </div>
-                <div className="col-md-2 col-6 mb-2">
+                <div className="col-md-2 col-9 mb-2">
                   <span className="fw-semibold text-secondary">Phone:</span>{" "}
                   <span className="text-dark">{user.phone}</span>
                 </div>
