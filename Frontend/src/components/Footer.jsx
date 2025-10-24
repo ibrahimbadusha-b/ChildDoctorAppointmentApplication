@@ -7,10 +7,8 @@ const Footer = () => {
   return (
     <footer className="main-footer">
       <div className="container-fluid">
-        {/* Main Footer Content */}
         <div className="footer-main">
           <div className="row">
-            {/* Children's Hospital Info Column */}
             <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
               <div className="footer-section">
                 <div className="footer-logo">

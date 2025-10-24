@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { doctors, timeSlots } from "../api/mockData";
 import "./BookingForm.css";
 import { auth } from "../config/firebase-config";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function BookingForm({ preselectedDoctorId }) {
   const user = auth.currentUser;
@@ -66,10 +68,15 @@ export default function BookingForm({ preselectedDoctorId }) {
 
       const selectedDoctor = doctors.find(d => d.id == form.doctorName);
 
-      alert(
-       `${form.authEmail} - ${form.doctorName} - ${form.date} - ${form.time} - ${form.childName} - ${form.childAge} - ${form.phone} - ${form.issue} `
-      );
-
+      toast.success("Appointment Booked Successfully!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored"
+      });
       setForm({
         authEmail: user.email,
         doctorName: "", date: "", time: "", childName: "", childAge: "",
@@ -77,7 +84,11 @@ export default function BookingForm({ preselectedDoctorId }) {
       });
 
     } catch (error) {
-      alert("Something went wrong. Please try again.");
+      toast.error("Something went wrong. Please try again.", {
+        position: "top-right",
+        autoClose: 3000,
+        theme: "colored"
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -236,6 +247,10 @@ export default function BookingForm({ preselectedDoctorId }) {
           )}
         </button>
       </form>
+      <div className="booking-form-container">
+
+        <ToastContainer />
+      </div>
     </div>
   );
 }

@@ -10,19 +10,16 @@ const BASE_NAV_ITEMS = [
     path: "/", 
     label: "Home", 
     icon: "bi-house-heart", 
-    color: "#FF6B6B" 
   },
   { 
     path: "/doctors", 
     label: "Our Doctors", 
     icon: "bi-people", 
-    color: "#00fff2fb" 
   },
   { 
     path: "/services", 
     label: "Services", 
     icon: "bi-hospital", 
-    color: "#96CEB4" 
   }
 ];
 
@@ -31,13 +28,11 @@ const AUTH_NAV_ITEMS = [
     path: "/book", 
     label: "Book Appointment", 
     icon: "bi-calendar-check", 
-    color: "#45B7D1" 
   },
   { 
     path: "/dashboard", 
     label: "Dashboard", 
     icon: "bi-speedometer2", 
-    color: "#FFEAA7" 
   }
 ];
 
