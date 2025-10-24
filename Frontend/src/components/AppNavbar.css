@@ -527,8 +527,6 @@
 
 /* Logout Item */
 .logout-item {
-  border-top: 1px solid #f1f3f5;
-  margin-top: 0.5rem;
   color: #dc3545 !important;
 }
 

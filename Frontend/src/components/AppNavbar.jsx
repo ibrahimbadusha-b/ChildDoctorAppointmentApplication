@@ -356,8 +356,6 @@ function UserProfileSection({
             <div className="auth-status">✓ Authenticated</div>
           </div>
         </div>
-
-        <div className="dropdown-divider"></div>
         <button 
           className="dropdown-menu-item logout-item" 
           onClick={onLogout}
