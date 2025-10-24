@@ -69,7 +69,7 @@ export default function BookingForm({ preselectedDoctorId }) {
       const selectedDoctor = doctors.find(d => d.id == form.doctorName);
 
       toast.success("Appointment Booked Successfully!", {
-        position: "top-right",
+        position: "top-left",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -248,7 +248,6 @@ export default function BookingForm({ preselectedDoctorId }) {
         </button>
       </form>
       <div className="booking-form-container">
-
         <ToastContainer />
       </div>
     </div>
