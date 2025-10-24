@@ -53,11 +53,11 @@ export default function ParentDashboard() {
               </div>
 
               <div className="row mb-2 text-capitalize">
-                <div className="col-md-3 col-6 mb-2">
+                <div className="col-md-3 col-12 mb-2">
                   <span className="fw-semibold text-secondary">Doctor:</span>{" "}
                   <span className="text-primary fw-medium">{user.doctorName}</span>
                 </div>
-                <div className="col-md-2 col-6 mb-2">
+                <div className="col-md-2 col-12 mb-2">
                   <span className="fw-semibold text-secondary">Date:</span>{" "}
                   <span className="fw-bold text-success">{user.date}</span>
                 </div>

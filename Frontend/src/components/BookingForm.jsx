@@ -69,13 +69,17 @@ export default function BookingForm({ preselectedDoctorId }) {
       const selectedDoctor = doctors.find(d => d.id == form.doctorName);
 
       toast.success("Appointment Booked Successfully!", {
-        position: "top-left",
+        position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        theme: "colored"
+        style: {
+          backgroundColor: "#14532d", 
+          color: "#fff",
+          fontWeight: "500",
+        },
       });
       setForm({
         authEmail: user.email,
@@ -111,7 +115,7 @@ export default function BookingForm({ preselectedDoctorId }) {
         {/* Doctor & DateTime Row */}
         <div className="form-row">
           <div className="form-group">
-            <label className="form-label">Select Doctor *</label>
+            <label className="form-label">Select Doctor :</label>
             <div className="select-wrapper">
               <select
                 className={`form-control ${errors.doctorName ? 'error' : ''}`}
@@ -133,7 +137,7 @@ export default function BookingForm({ preselectedDoctorId }) {
 
           <div className="form-group-half">
             <div className="form-group">
-              <label className="form-label">Date *</label>
+              <label className="form-label">Date :</label>
               <input
                 className={`form-control ${errors.date ? 'error' : ''}`}
                 type="date"
@@ -146,7 +150,7 @@ export default function BookingForm({ preselectedDoctorId }) {
             </div>
 
             <div className="form-group">
-              <label className="form-label">Time *</label>
+              <label className="form-label">Time :</label>
               <div className="select-wrapper">
                 <select
                   className={`form-control ${errors.time ? 'error' : ''}`}
@@ -169,7 +173,7 @@ export default function BookingForm({ preselectedDoctorId }) {
         {/* Patient Info Row */}
         <div className="form-row">
           <div className="form-group">
-            <label className="form-label">Child's Name *</label>
+            <label className="form-label">Child's Name :</label>
             <input
               className={`form-control ${errors.childName ? 'error' : ''}`}
               type="text"
@@ -182,7 +186,7 @@ export default function BookingForm({ preselectedDoctorId }) {
           </div>
 
           <div className="form-group-small">
-            <label className="form-label">Age *</label>
+            <label className="form-label">Age :</label>
             <input
               className={`form-control ${errors.childAge ? 'error' : ''}`}
               type="number"
@@ -201,7 +205,7 @@ export default function BookingForm({ preselectedDoctorId }) {
         <div className="form-row">
 
           <div className="form-group">
-            <label className="form-label">Phone Number *</label>
+            <label className="form-label">Phone Number :</label>
             <input
               className={`form-control ${errors.phone ? 'error' : ''}`}
               type="tel"
@@ -216,7 +220,7 @@ export default function BookingForm({ preselectedDoctorId }) {
 
         {/* Issue Description */}
         <div className="form-group">
-          <label className="form-label">Health Issue/Concern *</label>
+          <label className="form-label">Health Issue/Concern :</label>
           <textarea
             className={`form-control ${errors.issue ? 'error' : ''}`}
             name="issue"
