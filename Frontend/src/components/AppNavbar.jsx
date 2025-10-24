@@ -336,16 +336,12 @@ function UserProfileSection({
           </div>
         </div>
         
-        {/* User Display Name */}
         <span className="user-display-name">{displayName}</span>
         
-        {/* Dropdown Arrow */}
         <i className={`bi bi-chevron-down dropdown-arrow ${isDropdownOpen ? 'open' : ''}`}></i>
       </button>
 
-      {/* User Dropdown Menu */}
       <div className={`user-dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
-        {/* User Info Header */}
         <div className="dropdown-user-header">
           <div className="user-avatar-large">
             {userAvatar ? (
@@ -362,12 +358,6 @@ function UserProfileSection({
         </div>
 
         <div className="dropdown-divider"></div>
-
-      
-
-        <div className="dropdown-divider"></div>
-
-        {/* Logout Button */}
         <button 
           className="dropdown-menu-item logout-item" 
           onClick={onLogout}
