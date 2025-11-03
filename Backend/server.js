@@ -14,7 +14,7 @@ databaseConnection();
 app.use(express.json())
 app.use(cors())
 
-app.use('/demo',(req,res,next)=>{
+app.get('/demo',(req,res,next)=>{
       res.send(<h1>Hello Mapla</h1>)
 })
 
