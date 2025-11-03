@@ -1,0 +1,536 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+.doctor-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.08),
+    0 15px 60px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.doctor-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.12),
+    0 30px 100px rgba(0, 0, 0, 0.06);
+}
+
+.doctor-image-container {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0f9ff, #e0e7ff);
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: contrast(1.05) saturate(1.1);
+}
+
+.doctor-card:hover .doctor-image {
+  transform: scale(1.05);
+}
+
+.fee-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+.fee-icon {
+  font-size: 14px;
+}
+
+.fee-text {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.doctor-info {
+  padding: 28px;
+}
+
+.doctor-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 3px solid #f1f5f9;
+  position: relative;
+}
+
+.doctor-header::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  border-radius: 2px;
+}
+
+.doctor-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.doctor-specialization {
+  font-size: 1.2rem;
+  color: #7c3aed;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.doctor-type-icon {
+  color: #fbbf24;
+  font-size: 18px;
+}
+
+.doctor-qualification {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.qualification-icon {
+  color: #059669;
+  font-size: 16px;
+}
+
+/* Enhanced Credentials */
+.doctor-credentials {
+  margin-bottom: 24px;
+}
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border-radius: 14px;
+  border-left: 4px solid #7c3aed;
+  transition: all 0.3s ease;
+}
+
+.credential-item:hover {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  transform: translateX(4px);
+}
+
+.credential-icon {
+  color: #7c3aed;
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.credential-text {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+/* Enhanced Availability */
+.availability-info {
+  margin-bottom: 24px;
+}
+
+.availability-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  background: linear-gradient(135deg, #ddd6fe, #e0e7ff);
+  border-radius: 16px;
+  border-left: 5px solid #7c3aed;
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.1);
+}
+
+.availability-icon {
+  color: #7c3aed;
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.availability-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.available-days {
+  font-weight: 800;
+  color: #1f2937;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.timing {
+  font-size: 0.9rem;
+  color: #7c3aed;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timing-icon {
+  color: #059669;
+  font-size: 14px;
+}
+
+/* Enhanced Specialties */
+.specialties-section {
+  margin-bottom: 28px;
+}
+
+.specialties-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #374151;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.specialties-icon {
+  color: #059669;
+  font-size: 18px;
+}
+
+.specialties-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.specialty-tag {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  color: #374151;
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.specialty-check {
+  color: #10b981;
+  font-size: 12px;
+}
+
+.specialty-tag:hover {
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  color: white;
+  border-color: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.specialty-tag:hover .specialty-check {
+  color: #fbbf24;
+}
+
+/* Enhanced Book Appointment Button */
+.book-appointment-btn {
+  width: 100%;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-appointment-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.book-appointment-btn:hover::before {
+  left: 100%;
+}
+
+.book-appointment-btn:hover {
+  background: linear-gradient(135deg, #6d28d9, #7c3aed);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 45px rgba(124, 58, 237, 0.4);
+}
+
+.book-appointment-btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+  .doctor-image-container {
+    height: 300px;
+  }
+  
+  .doctor-info {
+    padding: 24px;
+  }
+  
+  .doctor-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .doctor-image-container {
+    height: 280px;
+  }
+  
+  .doctor-info {
+    padding: 22px;
+  }
+  
+  .doctor-name {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-card {
+    margin-bottom: 20px;
+  }
+  
+  .doctor-image-container {
+    height: 260px;
+  }
+  
+  .doctor-info {
+    padding: 20px;
+  }
+  
+  .doctor-name {
+    font-size: 1.3rem;
+  }
+  
+  .specialties-tags {
+    gap: 8px;
+  }
+  
+  .specialty-tag {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  
+  .doctor-specialization,
+  .doctor-qualification {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .doctor-card {
+    margin-bottom: 16px;
+    border-radius: 16px;
+  }
+  
+  .doctor-image-container {
+    height: 240px;
+  }
+  
+  .doctor-info {
+    padding: 18px;
+  }
+  
+  .doctor-name {
+    font-size: 1.2rem;
+  }
+  
+  .doctor-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .book-appointment-btn {
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+  
+  .credential-item {
+    padding: 12px 14px;
+  }
+  
+  .availability-item {
+    padding: 14px;
+  }
+}
+
+.doctor-card:focus-within {
+  outline: 3px solid #7c3aed;
+  outline-offset: 4px;
+}
+
+.book-appointment-btn:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.specialty-tag:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 1px;
+}
+
+.doctor-card * {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.doctor-card {
+  animation: slideInUp 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) both;
+}
+
+/* Staggered animation delays */
+.col-lg-4:nth-child(1) .doctor-card { animation-delay: 0.1s; }
+.col-lg-4:nth-child(2) .doctor-card { animation-delay: 0.2s; }
+.col-lg-4:nth-child(3) .doctor-card { animation-delay: 0.3s; }
+.col-lg-4:nth-child(4) .doctor-card { animation-delay: 0.4s; }
+.col-lg-4:nth-child(5) .doctor-card { animation-delay: 0.5s; }
+.col-lg-4:nth-child(6) .doctor-card { animation-delay: 0.6s; }
+
+@media (prefers-color-scheme: dark) {
+  .doctor-card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+  
+  .doctor-name {
+    color: #f9fafb;
+  }
+  
+  .doctor-qualification {
+    color: #9ca3af;
+  }
+  
+  .credential-text {
+    color: #e5e7eb;
+  }
+}
+
+@media print {
+  .doctor-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .doctor-image-container {
+    height: 200px;
+  }
+  
+  .fee-badge {
+    background: #000 !important;
+    color: #fff !important;
+  }
+  
+  .book-appointment-btn {
+    display: none;
+  }
+  
+  .fas {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .doctor-card,
+  .doctor-image,
+  .credential-item,
+  .specialty-tag,
+  .book-appointment-btn {
+    transition: none;
+    animation: none;
+  }
+  
+  .doctor-card:hover {
+    transform: none;
+  }
+  
+  .doctor-card:hover .doctor-image {
+    transform: none;
+  }
+}
+
+@media(max-width:320px){
+  .specialties-title{
+    color: white;
+  }
+}
